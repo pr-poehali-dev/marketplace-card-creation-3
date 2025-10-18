@@ -61,7 +61,7 @@ const ProductCard = () => {
                   onClick={() => setSelectedImage(idx)}
                 >
                   <CardContent className="p-0">
-                    <img src={img} alt={`Preview ${idx + 1}`} className="w-full aspect-square object-cover" />
+                    <img src={img} alt={`Preview ${idx + 1}`} className="w-full aspect-square my-0 mx-0 rounded-none object-contain" />
                   </CardContent>
                 </Card>
               ))}
