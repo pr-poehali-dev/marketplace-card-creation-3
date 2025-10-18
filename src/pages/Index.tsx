@@ -9,9 +9,10 @@ const ProductCard = () => {
   const [selectedImage, setSelectedImage] = useState(0);
   
   const images = [
-    'https://cdn.poehali.dev/projects/63db7990-8aa0-4544-ac3b-16fff400b5f7/files/9a9b667d-8675-484c-b004-47c2acec8739.jpg',
-    'https://cdn.poehali.dev/projects/63db7990-8aa0-4544-ac3b-16fff400b5f7/files/b4802e6e-c282-4441-9a3a-ff28916297e9.jpg',
-    'https://cdn.poehali.dev/projects/63db7990-8aa0-4544-ac3b-16fff400b5f7/files/6f6fd02f-4745-4be9-9de5-fbaa1f5524e3.jpg'
+    'https://cdn.poehali.dev/files/a1bc820e-ff69-4bd4-bdd8-29ac39d53036.jpeg',
+    'https://cdn.poehali.dev/projects/63db7990-8aa0-4544-ac3b-16fff400b5f7/files/02f9d692-b42a-433d-a4db-d7a542f6b59c.jpg',
+    'https://cdn.poehali.dev/projects/63db7990-8aa0-4544-ac3b-16fff400b5f7/files/20e1595c-4cef-4bba-aab0-355a0800a3dc.jpg',
+    'https://cdn.poehali.dev/projects/63db7990-8aa0-4544-ac3b-16fff400b5f7/files/9a9b667d-8675-484c-b004-47c2acec8739.jpg'
   ];
 
   const specifications = [
@@ -50,7 +51,7 @@ const ProductCard = () => {
               </CardContent>
             </Card>
             
-            <div className="grid grid-cols-3 gap-3">
+            <div className="grid grid-cols-4 gap-3">
               {images.map((img, idx) => (
                 <Card 
                   key={idx}
@@ -97,41 +98,63 @@ const ProductCard = () => {
               </TabsList>
               
               <TabsContent value="description" className="space-y-4 mt-6">
-                <Card className="border-l-4 border-l-primary">
-                  <CardContent className="pt-6">
-                    <div className="space-y-4">
-                      <div className="flex items-start gap-3">
-                        <div className="bg-primary/10 p-3 rounded-lg">
-                          <Icon name="Sparkles" size={24} className="text-primary" />
+                <div className="grid gap-4">
+                  <Card className="overflow-hidden">
+                    <CardContent className="p-0">
+                      <img 
+                        src="https://cdn.poehali.dev/projects/63db7990-8aa0-4544-ac3b-16fff400b5f7/files/02f9d692-b42a-433d-a4db-d7a542f6b59c.jpg" 
+                        alt="Описание характеристик" 
+                        className="w-full h-auto object-contain"
+                      />
+                    </CardContent>
+                  </Card>
+                  
+                  <Card className="overflow-hidden">
+                    <CardContent className="p-0">
+                      <img 
+                        src="https://cdn.poehali.dev/projects/63db7990-8aa0-4544-ac3b-16fff400b5f7/files/20e1595c-4cef-4bba-aab0-355a0800a3dc.jpg" 
+                        alt="Размеры и параметры" 
+                        className="w-full h-auto object-contain"
+                      />
+                    </CardContent>
+                  </Card>
+                  
+                  <Card className="border-l-4 border-l-primary">
+                    <CardContent className="pt-6">
+                      <div className="space-y-4">
+                        <div className="flex items-start gap-3">
+                          <div className="bg-primary/10 p-3 rounded-lg">
+                            <Icon name="Sparkles" size={24} className="text-primary" />
+                          </div>
+                          <div>
+                            <h3 className="font-semibold text-lg mb-1">Премиальное качество</h3>
+                            <p className="text-muted-foreground">Изготовлена из натуральной итальянской кожи высшего сорта. Каждая деталь продумана до мелочей.</p>
+                          </div>
                         </div>
-                        <div>
-                          <h3 className="font-semibold text-lg mb-1">Премиальное качество</h3>
-                          <p className="text-muted-foreground">Изготовлена из натуральной итальянской кожи высшего сорта. Каждая деталь продумана до мелочей.</p>
+                        
+                        <div className="flex items-start gap-3">
+                          <div className="bg-primary/10 p-3 rounded-lg">
+                            <Icon name="Briefcase" size={24} className="text-primary" />
+                          </div>
+                          <div>
+                            <h3 className="font-semibold text-lg mb-1">Функциональность</h3>
+                            <p className="text-muted-foreground">Множество отделений для организации вещей. Подходит для работы, путешествий и повседневного использования.</p>
+                          </div>
+                        </div>
+                        
+                        <div className="flex items-start gap-3">
+                          <div className="bg-primary/10 p-3 rounded-lg">
+                            <Icon name="Gem" size={24} className="text-primary" />
+                          </div>
+                          <div>
+                            <h3 className="font-semibold text-lg mb-1">Стильный дизайн</h3>
+                            <p className="text-muted-foreground">Современный минималистичный дизайн сочетается с классическими элементами. Подчеркнет ваш вкус и статус.</p>
+                          </div>
                         </div>
                       </div>
-                      
-                      <div className="flex items-start gap-3">
-                        <div className="bg-primary/10 p-3 rounded-lg">
-                          <Icon name="Briefcase" size={24} className="text-primary" />
-                        </div>
-                        <div>
-                          <h3 className="font-semibold text-lg mb-1">Функциональность</h3>
-                          <p className="text-muted-foreground">Множество отделений для организации вещей. Подходит для работы, путешествий и повседневного использования.</p>
-                        </div>
-                      </div>
-                      
-                      <div className="flex items-start gap-3">
-                        <div className="bg-primary/10 p-3 rounded-lg">
-                          <Icon name="Gem" size={24} className="text-primary" />
-                        </div>
-                        <div>
-                          <h3 className="font-semibold text-lg mb-1">Стильный дизайн</h3>
-                          <p className="text-muted-foreground">Современный минималистичный дизайн сочетается с классическими элементами. Подчеркнет ваш вкус и статус.</p>
-                        </div>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
+                    </CardContent>
+                  </Card>
+                </div>
               </TabsContent>
               
               <TabsContent value="specs" className="space-y-3 mt-6">
